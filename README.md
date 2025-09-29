@@ -31,7 +31,7 @@ g++ seq_sorting.cpp -o seq_sort
 ```
 **Compilar e executar algoritmo paralelo**
 ```sh
-mpic++ -03 -march=native -funroll-loops -o main.cpp phases.cpp par_sort
+mpic++ -O3 -march=native -funroll-loops -o main.cpp phases.cpp par_sort
 
 # ordenar 100 mil
 ./par_sort 100k.txt 100k_sorted_par.txt
