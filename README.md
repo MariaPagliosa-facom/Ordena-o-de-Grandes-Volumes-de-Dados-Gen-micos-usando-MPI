@@ -62,7 +62,7 @@ mpirun -np 8 ./par_sort 10M.txt 10M_sorted_par8p.txt
 ```
 ## Resultados (gráficos)
 
-![Tempo vs. tamanho](figures/tempo_vs_dataset.png)
+![Tempo vs. tamanho](figures/barras_tempo_vs_dataset.png)
 
 ![Tempo vs. nº de processos — 100K](figures/barras_tempo_vs_processos_100K.png)
 ![Tempo vs. nº de processos — 1M](figures/barras_tempo_vs_processos_1M.png)
