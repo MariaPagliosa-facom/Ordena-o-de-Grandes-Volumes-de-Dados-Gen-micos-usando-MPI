@@ -33,13 +33,30 @@ g++ seq_sorting.cpp -o seq_sort
 ```sh
 mpic++ -O3 -march=native -funroll-loops -o main.cpp phases.cpp par_sort
 
-# ordenar 100 mil
-./par_sort 100k.txt 100k_sorted_par.txt
+# ordenar 100 mil p = 2
+mpirun -np 2 ./par_sort 100k.txt 100k_sorted_par.txt
 
-# ordenar 1 milhão
-./par_sort 1M.txt 1M_sorted_par.txt
+# ordenar 1 milhão p = 2
+mpirun -np 2 ./par_sort 1M.txt 1M_sorted_par.txt
 
-# ordenar 10 milhões
-./par_sort 10M.txt 10M_sorted_par.txt
+# ordenar 10 milhões p = 2
+mpirun -np 2 ./par_sort 10M.txt 10M_sorted_par.txt
 
+# ordenar 100 mil p = 4
+mpirun -np 4 ./par_sort 100k.txt 100k_sorted_par.txt
+
+# ordenar 1 milhão p = 4
+mpirun -np 4 ./par_sort 1M.txt 1M_sorted_par.txt
+
+# ordenar 10 milhões p = 4
+mpirun -np 4 ./par_sort 10M.txt 10M_sorted_par.txt
+
+# ordenar 100 mil p = 8
+mpirun -np 8 ./par_sort 100k.txt 100k_sorted_par.txt
+
+# ordenar 1 milhão p = 8
+mpirun -np 8 ./par_sort 1M.txt 1M_sorted_par.txt
+
+# ordenar 10 milhões p = 8
+mpirun -np 8 ./par_sort 10M.txt 10M_sorted_par.txt
 ```
