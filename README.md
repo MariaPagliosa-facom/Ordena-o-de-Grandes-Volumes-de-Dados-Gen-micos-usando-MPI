@@ -60,3 +60,14 @@ mpirun -np 8 ./par_sort 1M.txt 1M_sorted_par8p.txt
 # ordenar 10 milhões p = 8
 mpirun -np 8 ./par_sort 10M.txt 10M_sorted_par8p.txt
 ```
+## Resultados (gráficos)
+
+![Tempo vs. tamanho](figures/tempo_vs_dataset.png)
+
+![Tempo vs. nº de processos — 100K](figures/tempo_vs_processos_100K.png)
+![Tempo vs. nº de processos — 1M](figures/tempo_vs_processos_1M.png)
+![Tempo vs. nº de processos — 10M](figures/tempo_vs_processos_10M.png)
+
+![Speedup vs. nº de processos — 100K](figures/speedup_vs_processos_100K.png)
+![Speedup vs. nº de processos — 1M](figures/speedup_vs_processos_1M.png)
+![Speedup vs. nº de processos — 10M](figures/speedup_vs_processos_10M.png)
