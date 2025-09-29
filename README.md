@@ -64,10 +64,13 @@ mpirun -np 8 ./par_sort 10M.txt 10M_sorted_par8p.txt
 Os gráficos a seguir mostram os resultados das execuções das linhas acima em um computador equipado com processador Ryzen 9 com 16 núcleos.
 ![Tempo vs. tamanho](figures/barras_colorido_log_tempo_vs_dataset.png)
 
-![Tempo vs. nº de processos — 100K](figures/barras_tempo_vs_processos_100K.png)
-![Tempo vs. nº de processos — 1M](figures/barras_tempo_vs_processos_1M.png)
-![Tempo vs. nº de processos — 10M](figures/barras_tempo_vs_processos_10M.png)
+### Tempo vs nº de processos
+| 100K | 1M | 10M |
+|---|---|---|
+| <img src="figures/barras_tempo_vs_processos_100K.png" width="300"> | <img src="figures/barras_tempo_vs_processos_1M.png" width="300"> | <img src="figures/barras_tempo_vs_processos_10M.png" width="300"> |
+### Speedup vs nº de processos
+| 100K | 1M | 10M |
+|---|---|---|
+| <img src="figures/barras_speedup_vs_processos_100K.png" width="300"> | <img src="figures/barras_speedup_vs_processos_1M.png" width="300"> | <img src="figures/barras_speedup_vs_processos_10M.png" width="300"> |
 
-![Speedup vs. nº de processos — 100K](figures/barras_speedup_vs_processos_100K.png)
-![Speedup vs. nº de processos — 1M](figures/barras_speedup_vs_processos_1M.png)
-![Speedup vs. nº de processos — 10M](figures/barras_speedup_vs_processos_10M.png)
+
