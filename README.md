@@ -8,13 +8,13 @@ g++ generate_datasets.cpp -o gen_dna
 ```
 ```sh
 # 100 mil sequências
-./gen_dna 100000 dna_100k.txt
+./gen_dna 100000 100k.txt
  
 # 1 milhão de sequências
-./gen_dna 1000000 dna_1M.txt
+./gen_dna 1000000 1M.txt
 
 # 10 milhões de sequências
-./gen_dna 10000000 dna_10M.txt
+./gen_dna 10000000 10M.txt
 ```
 **Compilar e executar algoritmo sequencial**
 ```sh
