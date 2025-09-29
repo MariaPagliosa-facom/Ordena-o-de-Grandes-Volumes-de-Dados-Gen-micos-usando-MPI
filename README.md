@@ -61,7 +61,7 @@ mpirun -np 8 ./par_sort 1M.txt 1M_sorted_par8p.txt
 mpirun -np 8 ./par_sort 10M.txt 10M_sorted_par8p.txt
 ```
 ## Resultados (gráficos)
-
+Os gráficos a seguir mostram os resultados das execuções das linhas acima em um computador equipado com processador Ryzen 9 com 16 núcleos.
 ![Tempo vs. tamanho](figures/barras_tempo_vs_dataset.png)
 
 ![Tempo vs. nº de processos — 100K](figures/barras_tempo_vs_processos_100K.png)
