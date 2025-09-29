@@ -38,7 +38,7 @@ main(int argc, char** argv)
     splitters_phase(local, size, rank, splitters, tD);
 
     vector<string> received;
-    int RECV_MIN=0, RECV_MAX=0, RECV_SUM=0;
+    int RECV_MIN = 0, RECV_MAX = 0, RECV_SUM = 0;
 
     global_exchange(local, splitters, size, rank, received, tD, tE, RECV_MIN, RECV_MAX, RECV_SUM);
     write_phase(received, argv[2], size, rank, tE, tF);
