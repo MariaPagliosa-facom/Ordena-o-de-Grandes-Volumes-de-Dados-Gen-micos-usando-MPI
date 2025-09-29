@@ -14,8 +14,6 @@ distribution_phase(const char* in_path, int size, int rank,
                        double& tA, double& tB,
                        int& LOC_MIN, int& LOC_MAX)
 {
-    MPI_Barrier(MPI_COMM_WORLD);
-    tA = MPI_Wtime();  // início Fase A
 
     vector<string> all;
 
@@ -37,6 +35,9 @@ distribution_phase(const char* in_path, int size, int rank,
         N = (long long)all.size();
     }
 
+    MPI_Barrier(MPI_COMM_WORLD);
+    tA = MPI_Wtime();  // início Fase A
+  
     // Broadcast de N e cálculo da partição
     MPI_Bcast(&N, 1, MPI_LONG_LONG, 0, MPI_COMM_WORLD);
 
@@ -505,6 +506,9 @@ write_phase(const vector<string>& received, const char* out_path,
                 rank==0 ? out_chars_displs.data() : nullptr,
                 MPI_CHAR, 0, MPI_COMM_WORLD);
 
+    MPI_Barrier(MPI_COMM_WORLD);
+    tF = MPI_Wtime();
+  
     // Rank 0 escreve o arquivo final
     if (rank == 0)
     {
@@ -528,7 +532,6 @@ write_phase(const vector<string>& received, const char* out_path,
         fout.close();
     }
 
-    MPI_Barrier(MPI_COMM_WORLD);
-    tF = MPI_Wtime();
 }
+
 
